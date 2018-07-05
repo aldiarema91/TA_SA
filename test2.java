@@ -7,7 +7,7 @@ package n.queen;
 
 /**
  *
- * @author Aldi
+ * @author Rahadianap
  */
 public class test {
     
@@ -16,7 +16,7 @@ public class test {
         for (int i = 0; i < N; i++)
         {
             for (int j = 0; j < N; j++)
-                System.out.print(" " + Map[i][j]
+                System.out.print(" " + Map[j][i]
                                  + " ");
             System.out.println();
         }
@@ -24,17 +24,20 @@ public class test {
 
     public static void main(String args[])
     {
-        int sd=0;
+        int map ;
+	int sd=0;
         Scanner in = new Scanner(System.in);
         while (true) {            
             System.out.print("Map = ");
             sd = in.nextInt();
-            if (sd>3) {
+            if (sd>5) {
             	int Map[][] = new int[sd][sd];
                 printMap(Map, sd);
                 break;
             }
             System.out.println("Masukan lebih dari 3");
+		System.out.println("Masukan lebih dari 3");
+		System.out.println("Masukan lebih dari 3");
         }
     }
 }

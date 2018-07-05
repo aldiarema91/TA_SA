@@ -10,16 +10,31 @@ package n.queen;
  * @author Aldi
  */
 public class test {
+    
+	void printSolution(int Map[][], int N)
+    {
+        for (int i = 0; i < N; i++)
+        {
+            for (int j = 0; j < N; j++)
+                System.out.print(" " + Map[i][j]
+                                 + " ");
+            System.out.println();
+        }
+    }
+
     public static void main(String args[])
     {
-        int N = 4;
-        int[][] map = new int[N][N];
-        
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                System.out.print(map[i][j]+", ");
+        int sd=0;
+        Scanner in = new Scanner(System.in);
+        while (true) {            
+            System.out.print("Map = ");
+            sd = in.nextInt();
+            if (sd>3) {
+            	int Map[][] = new int[sd][sd];
+                printSolution(Map, sd);
+                break;
             }
-            System.out.println("");
+            System.out.println("Masukan lebih dari 3");
         }
     }
 }

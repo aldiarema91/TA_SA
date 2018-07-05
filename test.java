@@ -11,7 +11,7 @@ package n.queen;
  */
 public class test {
     
-	void printSolution(int Map[][], int N)
+	void printMap(int Map[][], int N)
     {
         for (int i = 0; i < N; i++)
         {
@@ -31,7 +31,7 @@ public class test {
             sd = in.nextInt();
             if (sd>3) {
             	int Map[][] = new int[sd][sd];
-                printSolution(Map, sd);
+                printMap(Map, sd);
                 break;
             }
             System.out.println("Masukan lebih dari 3");

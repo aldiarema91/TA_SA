@@ -16,7 +16,7 @@ public class test {
         for (int i = 0; i < N; i++)
         {
             for (int j = 0; j < N; j++)
-                System.out.print(" " + Map[j][i]
+                System.out.print(" " + Map[i][j]
                                  + " ");
             System.out.println();
         }
@@ -30,7 +30,7 @@ public class test {
         while (true) {            
             System.out.print("Map = ");
             sd = in.nextInt();
-            if (sd>5) {
+            if (sd>3) {
             	int Map[][] = new int[sd][sd];
                 printMap(Map, sd);
                 break;

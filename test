@@ -1,0 +1,27 @@
+void jo(){
+    boolean cek;
+    int queen;
+    int sd=0;
+    Scanner in = new Scanner(System.in);
+    System.out.print("Map = ");
+    sd = in.nextInt();
+    if (sd>3) {
+        int Mape[][] = new int[sd][sd];
+
+        for (int i = 0; i < sd; i++){
+            for (int j = 0; j < sd; j++){
+                Mape[i][j] = 1;
+            }
+        }
+        
+        for (int i = 0; i < sd; i++){
+            for (int j = 0; j < sd; j++){
+                if (ngecek(Mape, i, j) == true) {
+                    Mape[i][j]=0;
+                }
+            }
+        }
+        printMap(Mape, sd);
+    }
+    System.out.println("Masukan lebih dari 3");     
+}

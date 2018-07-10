@@ -1,3 +1,15 @@
+void printMap(int mape[][], int L)
+{
+
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < L; j++) {
+            System.out.print(mape[i][j]+" ");
+        }
+        System.out.println("");
+    }
+    System.out.println("====================");
+
+}
 boolean ngecek(int mape[][], int bar, int kol){
     boolean a=false;
     int x=kol;

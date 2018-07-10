@@ -1,3 +1,28 @@
+boolean ngecek(int mape[][], int bar, int kol){
+    boolean a=false;
+    int x=kol;
+    for (int i = 0; i < kol; i++) {
+        if (mape[bar][i]==mape[bar][kol]) {
+            a = true;
+            System.out.println("kol "+ kol);
+        }
+    }
+    for (int i = 0; i < bar; i++) {
+        if (mape[i][kol]==mape[bar][kol]) {
+            a = true;
+            System.out.println("bar "+ kol);
+        }
+    }
+//        for (int i=bar, j=kol; j>=0 && i<mape.length; i++, j--) {
+//            if (mape[i][kol]==mape[bar][kol]) {
+//                a = true;
+//                System.out.println("bar "+ kol);
+//            }
+//        }
+
+
+    return a;
+}
 void jo(){
     boolean cek;
     int queen;

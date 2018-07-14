@@ -12,6 +12,7 @@ void printMap(int mape[][], int L)
 }
 boolean ngecek(int mape[][], int bar, int kol){
     boolean a=false;
+    boolean H=false;
     int x=kol;
     for (int i = 0; i < kol; i++) {
         if (mape[bar][i]==mape[bar][kol]) {
@@ -25,15 +26,39 @@ boolean ngecek(int mape[][], int bar, int kol){
             System.out.println("bar "+ kol);
         }
     }
-//        for (int i=bar, j=kol; j>=0 && i<mape.length; i++, j--) {
-//            if (mape[i][kol]==mape[bar][kol]) {
-//                a = true;
-//                System.out.println("bar "+ kol);
-//            }
-//        }
+    for (int i = bar,j=kol; i>=0 && j>=0; i--,j--) {
+            System.out.println(i+","+j+" x "+bar+","+kol+"<<<<<<<<<,");
+            System.out.println(mape[i][j]+"x"+mape[i][j]);
+            if (mape[i][j]==mape[bar][kol] && i!=bar) {
+                System.out.println("0");
+                a = true;
+            }else{
+                System.out.println("1");
+            }
+        }
+    for (int i = bar,j=kol; i>=0 && j<mape.length; i--,j++) {
+        System.out.println(i+","+j+" x "+bar+","+kol+"<<<<<<<<<,");
+        System.out.println(mape[i][j]+"x"+mape[i][j]);
+        if (mape[i][j]==mape[bar][kol] && i!=bar) {
+            System.out.println("0");
+            a = true;
+        }else{
+            System.out.println("1");
+        }
+    }
 
+    System.out.print("Keputusan : ");
+    if (a==true) {
+        System.out.println("dihapus");
+        H = true;
+        System.out.println("===============");
+        return true;
+    }else{
+        System.out.println("gak dihapus");
+        System.out.println("===============");
+    }
 
-    return a;
+    return H;
 }
 void jo(){
     boolean cek;
@@ -44,15 +69,10 @@ void jo(){
     sd = in.nextInt();
     if (sd>3) {
         int Mape[][] = new int[sd][sd];
-
-        for (int i = 0; i < sd; i++){
-            for (int j = 0; j < sd; j++){
-                Mape[i][j] = 1;
-            }
-        }
         
         for (int i = 0; i < sd; i++){
             for (int j = 0; j < sd; j++){
+                Mape[i][j] = 1;
                 if (ngecek(Mape, i, j) == true) {
                     Mape[i][j]=0;
                 }

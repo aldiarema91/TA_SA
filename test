@@ -1,3 +1,7 @@
+public static void main(String args[]) {
+    test Run = new test();
+    Run.jo();
+}
 void printMap(int mape[][], int L)
 {
 
